@@ -50,7 +50,24 @@
 <body id="body">
 
     <!-- Header Start -->
-
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">TRY NOW</a>
+            <a href="#">GET SUGAR</a>
+            <a href="#">DOWNLOAD</a>
+            <a href="#">BLOG</a>
+            <a href="javascript:void(0)" class="search">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2"><i class="fas fa-search"></i></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
     <header class="navigation">
         <div class="container">
             <div class="row">
@@ -60,11 +77,11 @@
                         <div class="container-fluid">
                             <!-- Brand and toggle get grouped for better mobile display -->
                             <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
+                                <button type="button" onclick="openNav()" class="navbar-toggle collapsed">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
 							</button>
                                 <a class="navbar-brand" href="index.html">
                                     <img class="logos" src="images/logo.png" alt="Logo">
@@ -110,34 +127,12 @@
                                             <li><a href="http://planet.sugarlabs.org">Blog Archive</a></li>
                                         </ul>
                                     </li>
-                                    <!-- <li>
-                                        <div class="search-box">
-                                            <form autocomplete="off" action="/action_page.php">
-                                                <div class="autocomplete" style="width:300px;">
-                                                    <input class="search-text" type="text" name="" placeholder="Type to search">
-                                                    <a class="search-btn" href="#">
-                                                        <i class="fas fa-search"></i>
-                                                    </a>
-                                                </div>
-                                            </form>
-                                            <ul class="nav navbar-nav navbar-right">
-                                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Join Us<span class="caret"></span></a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="https://wiki.sugarlabs.org/go/Mailing_Lists">Community Mailing Lists</a></li>
-                                                        <li><a href="https://github.com/sugarlabs/sugar-docs/blob/master/README.md/">Developer's Guide</a></li>
-                                                        <li><a href="https://wiki.sugarlabs.org/go/Local_Labs">Start a local lab</a></li>
-                                                        <li role="separator" class="divider"></li>
-                                                        <li class="dropdown-header"></li>
-                                                        <li><a href="http://translate.sugarlabs.org">Contribute to Translation</a></li>
-                                                        <li><a href="https://github.com/sugarlabs/sugar-docs/blob/master/README.md">Contribute to Software</a></li>
-                                                        <li><a href="https://wiki.sugarlabs.org/go/Sugar_Labs/Getting_Involved">Contribute to Central Organisation</a></li>
-                                                        <li><a href="https://wiki.sugarlabs.org/go/Category:Project">Related Projects</a></li>
-                                                        <li><a href="/profiles">Contributors</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li> -->
+                                    <li>
+                                        <form class="form-inline">
+                                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                        </form>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- /.navbar-collapse -->
@@ -776,7 +771,15 @@
     <script type="text/javascript" src="js/caro.js"></script>
     <script type="text/javascript" src="js/search.js"></script>
 
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
 
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
 </body>
 
 </html>
